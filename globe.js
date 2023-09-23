@@ -6,9 +6,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 let phi = 0;
 let canvas = document.getElementById("globe");
 const globe = (0, _cobe.default)(canvas, {
-  devicePixelRatio: 2,
-  width: 1700,
-  height: 1700,
+  devicePixelRatio: 1,
+  width: 800,
+  height: 800,
   phi: 0,
   theta: 0,
   dark: 1,
@@ -20,21 +20,12 @@ const globe = (0, _cobe.default)(canvas, {
   markerColor: [1, 0.5, 1],
   glowColor: [0.2, 0.2, 0.2],
   offset: [0, 0],
-	markers: [],
-	/*
-  markers: [{
-    location: [37.7595, -122.4367],
-    size: 0.03
-  }, {
-    location: [40.7128, -74.006],
-    size: 0.1
-  }],
-  */
+  markers: [],
   onRender: state => {
     // Called on every animation frame.
     // `state` will be an empty object, return updated params.
     state.phi = phi;
-    phi += 0.0005;
+    phi -= 0.0005;
   }
 });
 

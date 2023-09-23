@@ -129,6 +129,10 @@ a.social img {
 	color: rgb(111, 111, 111);
 	font-family: 'Instrument Sans', sans-serif;
 	font-size: 20px;
+	text-align: center;
+	max-width: 960px;
+	line-height: 1.5em;
+	margin: 0 0 1em 0;
 }
 .container.second .pricing {
 	display: flex;
@@ -517,4 +521,146 @@ form button {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 7em;
+}
+
+
+
+@media only screen and (max-width: 1439px) {
+	body {
+		font-size: 18px;
+	}
+	.container {
+		height: 650px;
+	}
+	.container.first a {
+		margin: 0 20px;
+	}
+	.container.first .content canvas {
+		transform: scale(0.8);
+		margin: 100px -150px 0 -330px;
+	}
+	.container.first .content .title {
+		font-size: 20px;
+	}
+	.container.first .content .subtitle {
+		font-size: 11px;
+		letter-spacing: 0.42em;
+		color: rgb(111, 111, 111);
+	}
+
+	.container.second {
+		height: auto;
+		padding: 100px 0;
+	}
+	.container.second .content {
+		font-size: 0.9em;
+		text-align: center;
+		max-width: 600px;
+	}
+	.container.second .pricing {
+		width: 700px;
+		flex-direction: column;
+	}
+	.container.second .pricing .block {
+		width: auto;
+	}
+
+	.container.third .title {
+		font-size: 40px;
+	}
+	.container.third .special {
+		font-size: 19px;
+	}
+	.container.third .price {
+		font-size: 24px;
+	}
+	.container.third .body {
+		font-size: 16px;
+	}
+	.container.third .action {
+		font-size: 14px;
+	}
+
+	.container.fourth {
+		padding: 0 40px;
+	}
+	.container.fourth .title {
+		font-size: 36px;
+	}
+	.container.fourth .content {
+		font-size: 16px;
+		margin: 20px 0 30px 0;
+	}
+
+	.container.fifth {
+		height: auto;
+		padding: 47px 100px;
+	}
+	.container.fifth .block {
+		gap: 25px;
+	}
+	.container.fifth .block .caption {
+		font-size: 20px;
+	}
+	.container.fifth .block .content {
+		font-size: 14px;
+	}
+
+	.container.sixth {
+		padding: 51px 100px;
+		height: auto;
+	}
+	.container.sixth .title {
+		font-size: 44px;
+	}
+	.container.sixth .content {
+		font-size: 16px;
+		margin: 20px 0 40px 0;
+	}
+	.container.sixth .voices {
+		flex-direction: column;
+	}
+	.container.sixth .voices .content {
+		font-size: 16px;
+		height: auto;
+		max-height: 16em;
+	}
+	.container.sixth .voices .voice {
+		margin: 0 0 20px 0;
+	}
+
+	.container.seventh {
+		font-size: 14px;
+	}
+	.container.seventh .block {
+		flex-direction: column;
+	}
+	.container.seventh .block .item {
+		padding: 0 30px;
+		text-align: center;
+	}
+	.container.seventh .block .item .title {
+		font-size: 28px;
+	}
+	.container.seventh .block .item .subtitle {
+		font-size: 16px;
+	}
+	.container.seventh form label {
+		text-align: left;
+	}
+	.container.seventh form button {
+		font-size: 16px;
+	}
+	.container.seventh .footer a.contact {
+		font-size: 16px;
+	}
+	.container.seventh .footer a.social img {
+		height: 25px;
+		width: 25px;
+	}
+	.container.seventh .footer a.social {
+		height: 55px;
+		width: 55px;
+		margin: 0 0 0 20px;
+	}
 }
