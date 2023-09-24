@@ -664,3 +664,155 @@ form button {
 		margin: 0 0 0 20px;
 	}
 }
+
+@media only screen and (max-width: 810px) {
+	body {
+		font-size: 12px;
+	}
+	.container {
+		height: auto;
+	}
+	.container.first .header {
+		font-size: 0.7em;
+	}
+	.container.first .header .action {
+		margin: 0 12px;
+	}
+	.container.first .content {
+		flex-direction: column-reverse;
+		position: relative;
+	}
+	.container.first .content .title {
+		margin: 32px 0 0 0;
+	}
+	.container.first .content .sidebar {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		flex-direction: row;
+		border-top-left-radius: 2em;
+		border-bottom-left-radius: 0em;
+		border-top-right-radius: 2em;
+		padding: 0.2em 2em 0em 2em;
+	}
+	.container.first .content canvas {
+		transform: scale(0.5);
+		margin: 0;
+		height: 800px;
+		width: 800px;
+		aspect-ratio: 1;
+		margin: -230px 0 -230px 0;
+	}
+	.container.second .title {
+		font-size: 40px;
+	}
+	.container.second .content {
+		font-size: 14px;
+		padding: 0 10px;
+	}
+	.container.second .pricing {
+		width: 340px;
+	}
+
+	.container.third {
+		flex-direction: column-reverse;
+	}
+	.container.third .content {
+		width: auto;
+		padding: 20px 20px 40px 20px;
+	}
+	.container.third .subtitle {
+		font-size: 20px;
+	}
+
+	.container.fourth {
+		padding: 60px 40px;
+	}
+	.container.fourth .content {
+		font-size: 14px;
+	}
+
+	.container.fifth .block {
+		grid-template-columns: repeat(1, minmax(200px, 1fr));
+		gap: 80px;
+	}
+	.container.fifth .larger {
+		grid-column: auto / span 1;
+	}
+	.container.fifth {
+		padding: 47px 20px;
+	}
+	.container.fifth .title {
+		font-size: 44px;
+	}
+	.container.fifth .block .content {
+		font-size: 20px;
+	}
+
+	.container.sixth {
+		padding: 51px 30px;
+	}
+	.container.sixth .title {
+		font-size: 40px;
+	}
+	.container.sixth .voice {
+		padding: 30px;
+	}
+	.container.sixth .profile > img {
+		height: 40px;
+		width: 40px;
+		padding: 5px;
+	}
+	.container.sixth .voice .content {
+		font-size: 12px;
+		line-height: 22px;
+		margin: 20px 0 0 0;
+	}
+
+	.container.seventh .block .item .title {
+		font-size: 20px;
+	}
+	form .field label {
+		font-size: 16px;
+	}
+	form .row {
+		flex-direction: column;
+	}
+	form .field {
+		margin: 18px 8px;
+	}
+	form .field input {
+		font-size: 12px;
+	}
+	.container.seventh .block .item {
+		padding: 0;
+	}
+	.container.seventh form button {
+		font-size: 12px;
+		padding: 6px 12px;
+		border-radius: 10px;
+	}
+	.container.seventh .footer {
+		display: block;
+		text-align: center;
+	}
+	.container.seventh .footer .item {
+		display: flex;
+	}
+	.container.seventh .footer .item a {
+		font-size: 12px;
+		flex: 1;
+	}
+	.container.seventh .footer a.social {
+		display: inline-flex;
+		margin: 10px;
+		height: 40px;
+		width: 40px;
+	}
+	.container.seventh .logo {
+		font-size: 12px;
+	}
+	.container.seventh a {
+		font-size: 12px;
+	}
+}
