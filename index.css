@@ -165,6 +165,9 @@ a.social:hover img {
 	display: flex;
 	flex-direction: row;
 }
+.container.third.flex-reverse {
+	flex-direction: row-reverse;
+}
 .container.third .block {
 	flex: 1;
 	display: flex;
@@ -334,21 +337,23 @@ a.social:hover img {
 
 /* Default styles for larger screens (desktop) */
 .container.fourth {
+	height: auto;
     display: flex;
     align-items: center;
     flex-direction: row;
     background-image: url('stars.png');
     background-size: cover;
-    padding: 0 18%;
+    padding: 0 10%;
+}
+.container.fourth img {
+	margin: 0px 0 0px 0;
 }
 .container.fourth .block{
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	text-align: center;
 }
 .container.fourth .title {
     font-size: 50px;
+	margin: 0 0 20px 0;
     font-family: 'Dela Gothic One', sans-serif;
 }
 
@@ -360,6 +365,8 @@ a.social:hover img {
 }
 
 .container.fourth .action {
+	display: block;
+	width: fit-content;
     padding: 1em;
     background-color: #e6eaec;
     color: rgb(51, 51, 51);
@@ -368,7 +375,7 @@ a.social:hover img {
     font-weight: 700;
     font-family: sans-serif;
     text-decoration: none;
-    margin: 0 0.8em 0 0;
+    margin: 10px auto;
 }
 
 
@@ -647,6 +654,9 @@ form button {
 	justify-content: flex-end;
 	margin-top: 7em;
 }
+.container.seventh .footer .social {
+	margin: 0 0 0 15px;
+}
 
 
 
@@ -690,6 +700,9 @@ form button {
 		width: auto;
 	}
 
+	.container.third {
+		display: block;
+	}
 	.container.third .title {
 		font-size: 40px;
 	}
@@ -706,8 +719,8 @@ form button {
 		font-size: 14px;
 	}
 
-	.container.fourth {
-		padding: 0 40px;
+	.container.fourth img {
+		margin: 0 -60px 0 -120px;
 	}
 	.container.fourth .title {
 		font-size: 36px;
@@ -839,8 +852,12 @@ form button {
 		width: 340px;
 	}
 
-	.container.third {
-		flex-direction: column-reverse;
+	.container.third, .container.third.flex-reverse {
+		display: flex;
+		flex-direction: column;
+	}
+	.container.third img {
+		width: -webkit-fill-available:
 	}
 	.container.third .content {
 		width: auto;
@@ -852,6 +869,12 @@ form button {
 
 	.container.fourth {
 		padding: 60px 40px;
+		/*padding: 0 40px;*/
+		display: block;
+		text-align: center;
+	}
+	.container.fourth img {
+		display: none;
 	}
 	.container.fourth .content {
 		font-size: 14px;
@@ -923,10 +946,11 @@ form button {
 	}
 	.container.seventh .footer .item {
 		display: flex;
+		justify-content: space-evenly;
+		margin: 0 0 15px 0;
 	}
 	.container.seventh .footer .item a {
 		font-size: 12px;
-		flex: 1;
 	}
 	.container.seventh .footer a.social {
 		display: inline-flex;
