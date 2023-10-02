@@ -675,10 +675,10 @@ form button {
 		margin: 100px -150px 0 -330px;
 	}
 	.container.first .content .title {
-		font-size: 20px;
+		font-size: 2.4vw;
 	}
 	.container.first .content .subtitle {
-		font-size: 11px;
+		font-size: 1.33vw;
 		letter-spacing: 0.42em;
 		color: rgb(111, 111, 111);
 	}
@@ -700,9 +700,6 @@ form button {
 		width: auto;
 	}
 
-	.container.third {
-		display: block;
-	}
 	.container.third .title {
 		font-size: 40px;
 	}
