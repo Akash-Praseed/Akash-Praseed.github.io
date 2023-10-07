@@ -72,7 +72,7 @@ a {
 }
 
 
-.container.first a.contact {
+.container.first a.contact, .container.seventh form button {
     padding: 0.5em 1em;
     background-color: #d9d9d9;
     color: #1a1a1a;
@@ -83,11 +83,11 @@ a {
     transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transitions */
 }
 
-.container.first a.contact:hover {
+.container.first a.contact:hover, .container.seventh form button:hover {
     background-color: #1a1a1a;
     color: #d9d9d9;
     border: solid 1px;
-    padding: calc(0.5em - 1px) calc(1em - 1px);
+    padding: calc(0.5em + 1px) calc(1em + 1px);
 
 }
 .container.first .content {
@@ -644,15 +644,8 @@ form .field input {
 	color: #fff;
 	outline: none;
 }
-form button {
-	padding: 0.2em 1em;
-	background-color: #efefef;
-	color: rgb(51, 51, 51);
-	font-family: "Instrument Sans", sans-serif;
-	font-size: 18px;
-	font-weight: 600;
-	border-radius: 0.5em;
-	margin: 0 1.5em;
+button[disabled] {
+	pointer-events: none;
 }
 .container.seventh .footer {
 	display: flex;
@@ -663,7 +656,22 @@ form button {
 	margin: 0 0 0 15px;
 }
 
+form.error .msg-display, form.success .msg-display {
+	display: block;
+}
+form.success .msg-display {
+	color: #3f3;
+}
+form.error .msg-display {
+	color: #f55;
+}
 
+.msg-display {
+	text-align: center;
+	display: none;
+	margin: 0 0 20px 0;
+	font-family: 'instrument', sans-serif;
+}
 
 @media only screen and (max-width: 1439px) {
 	body {
@@ -827,7 +835,7 @@ form button {
 		position: relative;
 	}
 	.container.first .content .title {
-		margin: 32px 0 0 0;
+		margin: 0px 0 0 0;
 		font-size: 20px;
 	}
 	.container.first .content .subtitle {
@@ -971,7 +979,7 @@ form button {
 	}
 	.container.seventh form button {
 		font-size: 12px;
-		padding: 6px 12px;
+		/*padding: 6px 12px;*/
 		border-radius: 10px;
 	}
 	.container.seventh .footer {

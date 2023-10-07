@@ -3,6 +3,77 @@
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="font.css">
 	<head>
+		<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+
+import { serverTimestamp, getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX7uji6CR4I0ZYKBKMwHjFBwX6XH59JUw",
+    authDomain: "milkywayy-c4d82.firebaseapp.com",
+    projectId: "milkywayy-c4d82",
+    storageBucket: "milkywayy-c4d82.appspot.com",
+    messagingSenderId: "33305557363",
+    appId: "1:33305557363:web:d77243a57a83f850ac2d06",
+    measurementId: "G-KP2VR1VTWV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const firestore = getFirestore(app);
+  window.addMessage = (data) => {
+	return addDoc(collection(firestore, 'messages'), {...data, time: serverTimestamp()})
+  }
+		</script>
+		<script>
+  document.addEventListener('DOMContentLoaded', () => {
+	const form = document.forms[0];
+	const submit = form.querySelector('button')
+	const name = form.name;
+	const email = form.email;
+	const message = form.message;
+	function displayOut(success, message) {
+		form.classList.add(success?'success':'error')
+		form.querySelector('.msg-display').innerText = message;
+		if(success) {
+			name.value = "";
+			email.value = "";
+			form.message.value = "";
+		}
+		setTimeout(() => {
+			form.classList.remove('success')
+			form.classList.remove('error')
+			submit.disabled = false;
+		}, 3000)
+	}
+	  console.log('hahahahahah')
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		console.log('haha')
+		submit.disabled = true;
+		if(!window.addMessage) {
+			displayOut(false, 'Something went wrong')
+		}
+		window.addMessage({
+			name: name.value,
+			email: email.value,
+			message: message.value,
+		}).then(() => {
+			displayOut(true, 'Message Sent!')
+		}).catch(e => {
+			console.error(e)
+			displayOut(false, 'Something went wrong.')
+		})
+	})
+  })
+</script>
 		<meta name="viewport" content="width=device-width">
 		<title>Milkywayy</title>
 		<link rel="icon" href="Logo.png" type="image/png">
@@ -224,11 +295,10 @@ Together, we'll make sure your website not only stands out but also helps your o
 		<div class="container seventh" id="lets-talk">
 			<div class="header">
 				<div class="logo">MILKYWAYY</div>
-				<a href="" class="action">Plan</a>
-				<a href="" class="action">Services</a>
-				<a href="" class="action">Contact</a>
+				<a class="action" href="#aboutus">About</a>
+				<a class="action" href="#services">Services</a>
+				<a class="action" href="#portfolio">Work</a>
 			</div>
-			
 			<div class="block">
 				<div class="item">
 					<div class="title">LET'S TALK</div>
@@ -239,17 +309,18 @@ Together, we'll make sure your website not only stands out but also helps your o
 						<div class="row">
 							<div class="field">
 								<label for="fullname">NAME</label>
-								<input placeholder="Your Name">
+								<input required id="name" name="name" placeholder="Your Name">
 							</div>
 							<div class="field">
 								<label for="email">EMAIL</label>
-								<input placeholder="example@yourdomain.com">
+								<input required id="email" name="email" placeholder="example@yourdomain.com">
 							</div>
 						</div>
 						<div class="field">
-							<label for="email">MESSAGE</label>
-							<input placeholder="Hi there...">
+							<label for="message">MESSAGE</label>
+							<input required id="message" name="message" placeholder="Hi there...">
 						</div>
+						<div class="msg-display"></div>
 						<button>SEND</button>
 					</form>
 				</div>
