@@ -749,6 +749,7 @@ form button {
 	.container.sixth {
 		padding: 51px 100px;
 		height: auto;
+		margin: 0px;
 	}
 	.container.sixth .title {
 		font-size: 44px;
@@ -813,7 +814,10 @@ form button {
 		height: auto;
 	}
 	.container.first .header {
-		font-size: 0.7em;
+		font-size: 1em;
+	}
+	.container.first .header .action-button {
+		display: none;
 	}
 	.container.first .header .action {
 		margin: 0 12px;
@@ -824,6 +828,10 @@ form button {
 	}
 	.container.first .content .title {
 		margin: 32px 0 0 0;
+		font-size: 20px;
+	}
+	.container.first .content .subtitle {
+		font-size: 11px;
 	}
 	.container.first .content .sidebar {
 		position: absolute;
