@@ -199,52 +199,6 @@ a.social:hover img {
 	font-weight: 700;
 	margin: 1em 0 0.5em 0;
 }
-.container.third .special {
-	color: #fff;
-	font-size: 24px;
-	font-family: 'Inter', sans-serif;
-	color: rgb(240, 242, 245);
-}
-.container.third .price {
-	font-size: 30px;
-	font-weight: 700;
-}
-.container.third .body {
-	color: rgb(111, 111, 111);
-	font-family: 'Inter', sans-serif;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 1.6em;
-	font-weight: 500;
-	margin: 0.5em 0 1em 0;
-}
-.container.third .action {
-	padding: 1em;
-	background-color: #282828;
-	border-radius: 0.5em;
-	font-size: 14px;
-	font-weight: 700;
-	font-family: sans-serif;
-	color: #fff;
-	text-decoration: none;
-	margin: 0 0.8em 0 0;
-	transition: background-color 0.3s ease, color 0.3s ease;
-}
-.container.third .action:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-
-.container.second .action.secondary {
-	background-color: #d5d5d5;
-	color: #1a1a1a;
-}
-.container.second .action.secondary:hover {
-    background-color: #ffffff;
-    color: #1a1a1a;
-}
-
 
 
 
@@ -334,13 +288,15 @@ a.social:hover img {
 
 
 .container#services {
-	padding: 0 10%;
+	padding: 07% 10%;
 	height: auto;
-	margin: 80px 0;
+	margin: 0px 0 0 0;
+	background-color: #282828;
+	
 }
 .container#services .title {
 	margin: -40px 0 30px 0;
-	color: #fff;
+	color: #f0f2f5;
 	font-size: 50px;
 	text-align: center;
     font-family: 'Dela Gothic One', sans-serif;
@@ -355,9 +311,10 @@ a.social:hover img {
 .container#services .item {
 	display: flex;
 	background-color: #fff;
+	opacity: 90%;
 	padding: 10px;
 	border-radius: 20px;
-	height: calc(450px - 18vw);
+	height: calc(435px - 18vw);
 }
 .container#services img {
 	height: calc(7px + 6vw);
@@ -391,12 +348,13 @@ a.social:hover img {
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-image: url('stars.png');
+    background-color: #1a1a1a;
     background-size: cover;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 .container.fourth img {
 	margin: 0px 0 0px 0;
+	opacity: 90%;
 }
 .container.fourth .block{
 	text-align: left;
@@ -412,21 +370,11 @@ a.social:hover img {
     line-height: 1.5em;
     color: rgb(111, 111, 111);
     font-family: 'Inter', sans-serif;
-}
+	line-height: 1.5em;
+	height: 16em;
+	overflow-y: scroll;
+	font-weight: 500;}
 
-.container.fourth .action {
-	display: block;
-	width: fit-content;
-    padding: 1em;
-    background-color: #e6eaec;
-    color: rgb(51, 51, 51);
-    border-radius: 0.5em;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: sans-serif;
-    text-decoration: none;
-    margin: 20px 0 10px 0;
-}
 
 
 /* Responsive styles for tablets */
@@ -463,7 +411,9 @@ a.social:hover img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 15%;
+	padding: 13%;
+	padding: 10% 13%;
+	background-color: #282828;
 }
 .container.fifth .title {
 	font-size: 50px;
@@ -508,7 +458,7 @@ a.social:hover img {
 	margin: 1.2em 0 0.7em 0;
 }
 .container.fifth .content {
-	color: rgb(111, 111, 111);
+	color: #959595;
 	font-size: 20px;
 }
 
@@ -527,11 +477,14 @@ a.social:hover img {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 15%;
+	padding: 0 12%;
+	margin: -145px 0 0 0;
+
 }
 .container.sixth .title {
 	font-family: 'Dela Gothic One', sans-serif;
 	font-size: 50px;
+	margin: 0 0 0.5em 0;
 }
 .container.sixth > .content {
 	color: rgb(111, 111, 111);
@@ -550,6 +503,7 @@ a.social:hover img {
 	flex: 1;
 	min-width: 0;
 	background-color: #fff;
+	opacity: 90%;
 	margin: 0 0.5em;
 	border-radius: 1em;
 	padding: 1.5em;
@@ -589,7 +543,7 @@ a.social:hover img {
 	color: rgb(102, 102, 102);
 	font-family: 'Inter', sans-serif;
 	line-height: 1.5em;
-	height: 16em;
+	height: 13em;
 	overflow-y: scroll;
 	font-weight: 500;
 }
@@ -605,6 +559,7 @@ a.social:hover img {
 	padding: 2em;
 	height: calc(790px - 4em);
 	background-image: url('stars.png');
+	opacity: 90%;
 	background-size: cover;
 }
 .container.seventh .header {
@@ -767,7 +722,7 @@ form button {
 	}
 
 	.container.fourth img {
-		margin: 0 -60px 0 -120px;
+		margin: -100px -80px 0 -150px;
 	}
 	.container.fourth .title {
 		font-size: 36px;
@@ -904,7 +859,7 @@ form button {
 		flex-direction: column;
 	}
 	.container.third img {
-		width: -webkit-fill-available:
+		width: -webkit-fill-available;
 	}
 	.container.third .content {
 		width: auto;
