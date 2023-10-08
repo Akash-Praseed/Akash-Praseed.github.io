@@ -687,7 +687,7 @@ form.error .msg-display {
 .container.seventh .footer {
   text-align: center;
   padding: 60px 0 30px 0;
-  margin: 40px -40px -30px -40px;
+  margin: 40px -28px -28px -28px;
 	font-family: "Instrument Sans", sans-serif;
   font-size: 14px;
 	/*color: #6f6f6f;*/
@@ -840,6 +840,7 @@ form.error .msg-display {
 @media only screen and (max-width: 810px) {
 	body {
 		font-size: 12px;
+    height: 100vw;
 	}
 	.container {
 		height: auto;
@@ -876,12 +877,12 @@ form.error .msg-display {
 		padding: 0.2em 2em 0em 2em;
 	}
 	.container.first .content canvas {
-		transform: scale(0.5);
+		transform: scale(0.3);
 		margin: 0;
 		height: 800px;
 		width: 800px;
 		aspect-ratio: 1;
-		margin: -230px 0 -230px 0;
+		margin: -250px 0 -250px 0;
 	}
 	.container.second .title {
 		font-size: 40px;
