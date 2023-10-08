@@ -98,6 +98,8 @@ a {
 	justify-content: flex-end;
 	align-items: center;
 	padding-bottom: 20em;
+  background-color: #fff;
+  border-bottom: solid 2px red;
 }
 .container.first .content canvas {
 	width: 800px;
