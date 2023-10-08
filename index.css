@@ -94,12 +94,11 @@ a {
 .container.first .content {
 	display: flex;
 	flex-direction: row;
-	height: -webkit-fill-available;
 	justify-content: flex-end;
 	align-items: center;
 	padding-bottom: 20em;
   background-color: #fff;
-  border-bottom: solid 2px red;
+  border-bottom: solid 2px green;
 }
 .container.first .content canvas {
 	width: 800px;
