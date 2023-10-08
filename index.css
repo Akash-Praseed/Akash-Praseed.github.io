@@ -885,7 +885,7 @@ form.error .msg-display {
 		height: 800px;
 		width: 800px;
 		aspect-ratio: 1;
-		margin: -250px 0 -250px 0;
+		margin: -250px 0 -0px 0;
 	}
 	.container.second .title {
 		font-size: 40px;
