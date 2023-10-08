@@ -1,4 +1,4 @@
-html {
+mtml {
 	scroll-behavior: smooth;
 }
 body {
@@ -78,6 +78,7 @@ a {
     color: #1a1a1a;
     border-radius: 0.4em;
     font-size: 1.1em;
+    border: none;
     font-weight: 500;
     width: auto;
     transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transitions */
@@ -87,7 +88,7 @@ a {
     background-color: #1a1a1a;
     color: #d9d9d9;
     border: solid 1px;
-    padding: calc(0.5em + 1px) calc(1em + 1px);
+    padding: calc(0.5em - 1px) calc(1em - 1px);
 
 }
 .container.first .content {
@@ -576,7 +577,8 @@ a.social:hover img {
     text-decoration: none;
     font-family: "Instrument Sans", sans-serif;
     font-size: 20px;
-    margin: 0 1.5em; /* Adjust margin as needed */
+    width: 7em;
+    text-align: center;
     transition: color 0.3s ease, font-weight 0.3s ease; /* Add transitions for color and font-weight */
 }
 
@@ -623,7 +625,7 @@ form .row {
 form .field {
 	display: flex;
 	flex-direction: column;
-	margin: 1.5em 1.5em;
+	margin: 30px;
 }
 form .row .field {
 	flex: 1;
@@ -646,6 +648,11 @@ form .field input {
 }
 button[disabled] {
 	pointer-events: none;
+}
+.container.seventh form button {
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: bold;
 }
 .container.seventh .footer {
 	display: flex;
@@ -799,6 +806,7 @@ form.error .msg-display {
 	}
 	.container.seventh form button {
 		font-size: 16px;
+    margin: 0;
 	}
 	.container.seventh .footer a.contact {
 		font-size: 16px;
@@ -874,7 +882,9 @@ form.error .msg-display {
 		display: flex;
 		flex-direction: column;
 	}
-	.container.third img {
+	.container.third > img {
+    flex: 0 0 0;
+    height: 500px;
 		width: -webkit-fill-available;
 	}
 	.container.third .content {
@@ -891,7 +901,7 @@ form.error .msg-display {
 	.container#services .block {
 		grid-template-columns: repeat(1,minmax(200px,1fr));
 		grid-template-rows: repeat(6,min-content);
-		padding: 0 5%;
+		padding: 0 5% 50px 5%;
 		gap: 30px;
 	}
 	.container#services .item {
