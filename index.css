@@ -1041,7 +1041,7 @@ form.error .msg-display {
 	}
 }
 
-@supports (-webkit-touch-callout: none) {
+@supports not (transform: scale(0.3)) {
     .container.first .content canvas {
         margin-bottom: 200px;
     }
