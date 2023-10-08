@@ -1,4 +1,4 @@
-mtml {
+html {
 	scroll-behavior: smooth;
 }
 body {
@@ -877,9 +877,9 @@ form.error .msg-display {
 		padding: 0.2em 2em 0em 2em;
 	}
 	.container.first .content canvas {
-		-ms-transform: scale(0.3);
-		-moz-transform: scale(0.3);
-    -webkit-transform: scale(0.3);
+		-ms-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
 		transform: scale(0.3);
 		margin: 0;
 		height: 800px;
@@ -1039,4 +1039,10 @@ form.error .msg-display {
 	.container.seventh a {
 		font-size: 12px;
 	}
+}
+
+@supports (-webkit-touch-callout: none) {
+    .container.first .content canvas {
+        margin-bottom: 200px;
+    }
 }
