@@ -101,7 +101,7 @@ a {
 }
 .container.first .content canvas {
 	width: 800px;
-	margin: 300px 0 0 -300px;
+	margin: 300px 0 0 -100px;
 	height: 800px;
 }
 .container.first .content .block {
@@ -1041,8 +1041,3 @@ form.error .msg-display {
 	}
 }
 
-@supports not (transform: scale(0.3)) {
-    .container.first .content canvas {
-        margin-bottom: 200px;
-    }
-}
