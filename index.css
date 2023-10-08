@@ -97,7 +97,7 @@ a {
 	height: -webkit-fill-available;
 	justify-content: flex-end;
 	align-items: center;
-	padding-bottom: 7em;
+	padding-bottom: 20em;
 }
 .container.first .content canvas {
 	width: 800px;
