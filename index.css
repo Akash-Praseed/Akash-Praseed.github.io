@@ -318,6 +318,9 @@ a.social:hover img {
 	border-radius: 20px;
 	height: calc(435px - 18vw);
 }
+.container#services .item.mob {
+  display: none;
+}
 .container#services img {
 	height: calc(7px + 6vw);
 	width: calc(7px + 6vw);
@@ -926,10 +929,10 @@ form.error .msg-display {
 		padding: 0 5% 50px 5%;
 		gap: 30px;
 	}
-	.container#services .item {
-		height: calc(550px - 60vw);
-		min-height: 180px;
-	}
+  .container#services .item {
+    height: calc(550px - 60vw);
+    min-height: 180px;
+  }
 	.container#services .title {
 		font-size: 40px;
 		text-align: left;
@@ -1043,3 +1046,32 @@ form.error .msg-display {
 	}
 }
 
+@media only screen and (max-width: 560px) {
+    .container#services .item {
+        display: none;
+    }
+    .container#services .item.mob {
+      display: block;
+      font-family: Inter, sans-serif;
+      height: auto;
+      min-height: auto;
+      padding: 1.3em;
+    }
+    .container#services .header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 1em;
+    }
+    .container#services img {
+      height: 3em;
+      width: 3em;
+      margin: 0.7em;
+    }
+    .container#services .caption {
+      margin: 0;
+    }
+    .container#services .text {
+      padding: 0 0.8em 0.8em 0.8em;
+    }
+}
